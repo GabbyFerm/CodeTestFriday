@@ -10,10 +10,10 @@
             Dictionary<string, List<string>> anagramGroups = new Dictionary<string, List<string>>();
 
             // Gå igenom varje ord i listan
-            foreach (var word in wordList)
+            foreach (string word in wordList)
             {
                 // Sortera bokstäverna i ordet
-                var sortedWord = new string(word.OrderBy(character => character).ToArray());
+                string sortedWord = new string(word.OrderBy(character => character).ToArray());
 
                 // Om sorterade ordet redan finns i dictionary
                 if (anagramGroups.ContainsKey(sortedWord))
